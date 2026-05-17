@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Подписка Telegram</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:#222;
+}
+
+.card{
+    background:white;
+    padding:40px 30px;
+    border-radius:24px;
+    width:320px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.logo{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+p{
+    font-size:16px;
+    line-height:1.5;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.button{
+    display:block;
+    background:#229ED9;
+    color:white;
+    text-decoration:none;
+    padding:18px;
+    border-radius:14px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<img class="logo" src="ССЫЛКА_НА_ЛОГО" alt="logo">
+
+<h1>Остался последний шаг 👇</h1>
+
+<p>
+Подпишитесь на Telegram-канал, чтобы получить материал
+</p>
+
+<a id="tgButton" class="button" href="https://t.me/USERNAME">
+Подписаться в Telegram
+</a>
+
+</div>
+
+<script>
+
+const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+if(isMobile){
+    document.getElementById('tgButton').href = 'tg://resolve?domain=USERNAME';
+}
+
+</script>
+
+</body>
+</html>
